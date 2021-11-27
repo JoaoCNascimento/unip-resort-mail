@@ -113,7 +113,7 @@ function sendEmail(emails, email, res) {
     }).then(info => {
         res.status(200).send({ message: 'Emails enviados com sucesso!' });
     }).catch(er => {
-        res.status(500).send({ message: 'Houve um erro no servidor, contate o administrador do sistema ou tente novamente mais tarde.' });
+        res.status(500).send({ message: 'Houve um erro no servidor, contate o administrador do sistema ou tente novamente mais tarde.', erro: er });
     });
 
 } 
